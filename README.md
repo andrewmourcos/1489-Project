@@ -1,7 +1,4 @@
 # 1489-Project
 
-A computational program that determines all the ways to use 4 numbers (1, 4, 8, 9 for example) and 4 operations (+, -, /, *) to determine all the arrangements to get numbers 1-100.
+This '1489' concept started as a math project in grade 7 (to get used to arithmetic I guess...). It consists of using the numbers 1, 4, 8, 9 and operations +, -, /, * to get an expression that satisfies all numbers from 1-100. This long task required a lot of trial and error and TIME. Now (4 years later), I'm challenging myself to make a program that could've saved me a lot of effort back then ;)
 
-This 1489 concept started as a math project in grade 7 (to get used to arithmetic I guess...) and now (4 years later), I'm making a program that could have given me all the solutions using brute-force (computing EVERY possibility).
-
-Enjoy :)
