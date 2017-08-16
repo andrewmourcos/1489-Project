@@ -1,7 +1,7 @@
 import itertools
 import operator
 
-#make a dictionnary for the operators
+# make a dictionary for the operators
 ops_dict = {
     'P': operator.add,
     'M': operator.sub,
@@ -17,11 +17,12 @@ a = 1
 b = 4
 c = 8
 d = 9
+
 # Insert those numbers into a list
 nums = [a, b, c, d]
 perm_nums = []
 perm_ops = []
-n=0
+n = 0
 
 while len(perm_nums) < 24:
     # Determine all permutations for the numbers
@@ -34,11 +35,6 @@ while len(perm_nums) < 24:
     for p in perm2:
         perm_ops.append(p)
 
-print(perm_nums[0])
-print(perm_ops[0])
+    print(perm_nums)
+    print(perm_ops)
 
-while n < 3:
-    # calculate the first operation
-    last = ops_dict[perm_ops[0][n]](perm_nums[0][n], perm_nums[0][n+1])
-    print(last)
-    n+=1
