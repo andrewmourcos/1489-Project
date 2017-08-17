@@ -1,10 +1,10 @@
 from itertools import permutations, product
-
+# open file to write the expressions in
 file = open("output.txt", "w")
 
+# define function to evaluate expressions in reverse polish notation
 def reverse_polish(exp):
     stack = []
-
     for val in exp.split(' '):
         if val in ['-', '+', '*', '/']:
             op1 = stack.pop()
@@ -19,7 +19,7 @@ def reverse_polish(exp):
                 try:
                     result = op2 / op1
                 except:
-                    pass
+                    return 0
             stack.append(result)
         else:
             stack.append(float(val))
@@ -32,19 +32,17 @@ nums2 = []
 nums1 = []
 expression = []
 
+# get all permutations of numbers 1, 4, 8, 9
 perm4 = permutations(['1', '4', '8', '9'], 4)
-for p in perm4:
-    nums4.append(p)
+for p in perm4: nums4.append(p)
 perm3 = permutations(['1', '4', '8', '9'], 3)
-for p in perm3:
-    nums3.append(p)
+for p in perm3: nums3.append(p)
 perm2 = permutations(['1', '4', '8', '9'], 2)
-for p in perm2:
-    nums2.append(p)
+for p in perm2: nums2.append(p)
 perm1 = permutations(['1', '4', '8', '9'], 1)
-for p in perm1:
-    nums1.append(p)
+for p in perm1: nums1.append(p)
 
+# Cartesian product to get all operation possibilities
 for item in nums4:
     OpsPerm4 = product(['+','-','/','*'], repeat=3)
     for p in OpsPerm4:
@@ -62,6 +60,7 @@ for item in nums1:
     for p in OpsPerm1:
         expression.append(item+p)
 
+# iterating over our reverse polish notation evaluator and printing results
 for i in expression:
     exp = " ".join(i)
     polish_result = reverse_polish(exp)
@@ -69,4 +68,3 @@ for i in expression:
         print(i, '=', polish_result, file=file)
 
 file.close()
-

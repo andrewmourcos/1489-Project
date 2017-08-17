@@ -8,3 +8,7 @@ Here are the rules for this project:
 - you may only use each number ONCE in each expression
 - you may not use 2 digit numbers (ex: putting 1 and 4 together does not count as 14...)
 - you may use any combination of the 4 basic math operations (+, -, /, *)
+
+What's left to fix:
+    1) Adding square root and factorial (I need to check the rules first... ;) )
+    2) Adding normal-polish-notation
